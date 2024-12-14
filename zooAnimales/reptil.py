@@ -28,3 +28,6 @@ class Reptil(Animal):
     
     def getColorEscamas(self):
         return self._colorEscamas
+    
+    def getLargoCola(self):
+        return self._largoCola

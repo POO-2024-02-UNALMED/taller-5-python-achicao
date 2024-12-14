@@ -28,3 +28,6 @@ class Pez(Animal):
     
     def getColorEscamas(self):
         return self._colorEscamas
+    
+    def getCantidadAletas(self):
+        return self._cantidadAletas
