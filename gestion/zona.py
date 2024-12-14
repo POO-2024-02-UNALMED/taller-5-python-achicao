@@ -13,3 +13,12 @@ class Zona():
     
     def getZoo(self):
         return self._zoo
+    
+    def setZoo(self,zoo):
+        self._zoo = zoo
+    
+    def getNombre(self):
+        return self._nombre
+    
+    def setNombre(self,nombre):
+        self._nombre = nombre

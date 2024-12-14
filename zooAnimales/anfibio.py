@@ -11,14 +11,16 @@ class Anfibio(Animal):
         self._venenoso = venenoso
         self._listado.append(self)
 
-    def crearRana(self,nombre,edad,genero):
+    @classmethod
+    def crearRana(cls,nombre,edad,genero):
         rana = Anfibio(nombre, edad,"selva",genero,"rojo",True)
-        self._listado.append(rana)
+        cls._listado.append(rana)
         ranas += 1
 
-    def crearSalamandra(self,nombre,edad,genero):
+    @classmethod
+    def crearSalamandra(cls,nombre,edad,genero):
         salamandra = Anfibio(nombre, edad, "selva",genero,"negro y amarillo",False)
-        self._listado.append(salamandra)
+        cls._listado.append(salamandra)
         salamandras += 1
 
     def cantidadAnfibios(self):

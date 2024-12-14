@@ -11,11 +11,13 @@ class Ave(Animal):
         self._colorPlumas = colorPlumas
         self._listado.append(self)
 
+    @classmethod
     def crearHalcon(self,nombre,edad,genero):
         halcon = Ave(nombre, edad,"montañas",genero,"cafe glorioso")
         self._listado.append(halcon)
         halcones += 1
 
+    @classmethod
     def crearAguila(self,nombre,edad,genero):
         aguila = Ave(nombre, edad, "montañas",genero,"blanco y amarillo")
         self._listado.append(aguila)

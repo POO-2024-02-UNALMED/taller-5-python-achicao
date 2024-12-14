@@ -3,7 +3,7 @@ class Animal():
 
     def __init__(self,nombre = None,edad = None,habitat = None,genero = None,zona = None):
         self._nombre = nombre
-        self.edad = edad
+        self._edad = edad
         self._habitat = habitat
         self._genero = genero
         self._zona = zona
@@ -12,8 +12,8 @@ class Animal():
     def movimiento(self):
         return "desplazarse"
     
-    @staticmethod
-    def totalPorTipo(self):
+    @classmethod
+    def totalPorTipo(cls):
         from zooAnimales.mamifero import Mamifero
         from zooAnimales.ave import Ave
         from zooAnimales.reptil import Reptil
@@ -22,10 +22,39 @@ class Animal():
 
         return f"Mamiferos: {Mamifero.cantidadMamiferos}\nAves: {Ave.cantidadAves}\nReptiles: {Reptil.cantidadReptiles}\nPeces: {Pez.cantidadPeces}\nAnfibios: {Anfibio.cantidadAnfibios}"
 
-    def __str__(self):
+    def __toString__(self):
         
         if self._zona != None:
             return f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi genero es {self.genero}, la zona en la que me ubico es {self.zona[0]}, en el {self.zona[0].getZoo().getNombre()}"
         else:
             return f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi genero es {self.genero}"   
         
+    def getNombre(self):
+        return self._nombre
+    
+    def setNombre(self,nombre):
+        self._nombre = nombre
+
+    def getEdad(self):
+        return self._edad
+    
+    def setEdad(self,edad):
+        self._edad = edad
+
+    def getHabitat(self):
+        return self._habitat
+    
+    def setHabitat(self,habitat):
+        self._habitat = habitat
+
+    def getGenero(self):
+        return self._genero
+    
+    def setGenero(self,genero):
+        self._genero = genero
+
+    def getZona(self):
+        return self._zona
+    
+    def setZona(self,zona):
+        self._zona = zona

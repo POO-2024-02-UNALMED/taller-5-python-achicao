@@ -11,11 +11,13 @@ class Mamifero(Animal):
         self._patas = patas
         self._listado.append(self)
 
+    @classmethod
     def crearCaballo(self,nombre,edad,genero):
         caballo = Mamifero(nombre, edad, "pradera",genero,True,4)
         self._listado.append(caballo)
         caballos += 1
 
+    @classmethod
     def crearLeon(self,nombre,edad,genero):
         leon = Mamifero(nombre, edad, "selva",genero,True,4)
         self._listado.append(leon)
