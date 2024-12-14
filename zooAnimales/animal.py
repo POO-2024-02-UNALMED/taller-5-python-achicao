@@ -22,7 +22,7 @@ class Animal():
 
         return f"Mamiferos: {Mamifero.cantidadMamiferos}\nAves: {Ave.cantidadAves}\nReptiles: {Reptil.cantidadReptiles}\nPeces: {Pez.cantidadPeces}\nAnfibios: {Anfibio.cantidadAnfibios}"
 
-    def __toString__(self):
+    def toString(self):
         
         if self._zona != None:
             return f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi genero es {self.genero}, la zona en la que me ubico es {self.zona[0]}, en el {self.zona[0].getZoo().getNombre()}"

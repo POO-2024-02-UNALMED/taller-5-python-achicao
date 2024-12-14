@@ -1,7 +1,6 @@
 from zooAnimales.animal import Animal
 
 class Reptil(Animal):
-
     _listado = []
     iguanas = 0
     serpientes = 0
@@ -26,3 +25,6 @@ class Reptil(Animal):
 
     def cantidadReptiles(self):
         return len(self._listado)
+    
+    def getColorEscamas(self):
+        return self._colorEscamas

@@ -25,3 +25,6 @@ class Anfibio(Animal):
 
     def cantidadAnfibios(self):
         return len(self._listado)
+    
+    def getColorPiel(self):
+        return self._colorPiel
