@@ -5,7 +5,7 @@ class Mamifero(Animal):
     caballos = 0
     leones = 0
 
-    def __init__(self,nombre = None,edad = None,habitat = None,genero = None,pelaje = None,patas = None):
+    def __init__(self,nombre = None,edad = None,habitat = None,genero = None,pelaje = False,patas = None):
         super().__init__(nombre,edad,habitat,genero)
         self._pelaje = pelaje
         self._patas = patas
