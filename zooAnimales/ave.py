@@ -23,8 +23,9 @@ class Ave(Animal):
         cls._listado.append(aguila)
         Ave.aguilas += 1
 
-    def cantidadAves(self):
-        return len(self._listado)
+    @classmethod
+    def cantidadAves(cls):
+        return len(cls._listado)
     
     def getColorPlumas(self):
         return self._colorPlumas

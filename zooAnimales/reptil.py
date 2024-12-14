@@ -23,8 +23,9 @@ class Reptil(Animal):
         self._listado.append(serpiente)
         Reptil.serpientes += 1
 
-    def cantidadReptiles(self):
-        return len(self._listado)
+    @classmethod
+    def cantidadReptiles(cls):
+        return len(cls._listado)
     
     def getColorEscamas(self):
         return self._colorEscamas

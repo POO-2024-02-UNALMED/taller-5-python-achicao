@@ -23,8 +23,9 @@ class Mamifero(Animal):
         cls._listado.append(leon)
         Mamifero.leones += 1
 
-    def cantidadMamiferos(self):
-        return len(self._listado)
+    @classmethod
+    def cantidadMamiferos(cls):
+        return len(cls._listado)
     
     def isPelaje(self):
         return self._pelaje

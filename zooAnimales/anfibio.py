@@ -23,8 +23,9 @@ class Anfibio(Animal):
         cls._listado.append(salamandra)
         Anfibio.salamandras += 1
 
-    def cantidadAnfibios(self):
-        return len(self._listado)
+    @classmethod
+    def cantidadAnfibios(cls):
+        return len(cls._listado)
     
     def getColorPiel(self):
         return self._colorPiel

@@ -12,19 +12,20 @@ class Pez(Animal):
         self._listado.append(self)
 
     @classmethod
-    def crearSalmon(self,nombre,edad,genero):
+    def crearSalmon(cls,nombre,edad,genero):
         salmon = Pez(nombre, edad,"oceano",genero,"rojo",6)
-        self._listado.append(salmon)
+        cls._listado.append(salmon)
         Pez.salmones += 1
 
     @classmethod
-    def crearBacalao(self,nombre,edad,genero):
+    def crearBacalao(cls,nombre,edad,genero):
         bacalao = Pez(nombre, edad, "oceano",genero,"gris",6)
-        self._listado.append(bacalao)
+        cls._listado.append(bacalao)
         Pez.bacalaos += 1
 
-    def cantidadPeces(self):
-        return len(self._listado)
+    @classmethod
+    def cantidadPeces(cls):
+        return len(cls._listado)
     
     def getColorEscamas(self):
         return self._colorEscamas
